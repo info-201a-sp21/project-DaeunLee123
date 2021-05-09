@@ -19,15 +19,19 @@ _What data-driven questions do you hope to answer about this domain?_
 **Dataset 1 (Testing):**
 
 _Where did you download the data (e.g., a web URL)?_
-https://covidtracking.com/data/download
+
+The link to the data I found is [here](https://covidtracking.com/data/download).
 
 _How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?_
+
 The data was collected by comparing and averaging data sets released by the federal government. There were multiple teams within the company that were working with this COVID-19 data (ex. Race and ethnicity team), and each team would collect the data from the federal government that was appropriate to their specific area of data collection. The data is about the United States, and summarizes testing information (antibodies, positive and negative tests, etc), along with additional data such as the number of people in ventilator and the number of cases. 
 
 _How many observations (rows) are in your data?_
+
 20781 observations
 
 _How many features (columns) are in the data?_
+
 41 columns
 
 _What questions (from above) can be answered using the data in this dataset?_
@@ -38,16 +42,19 @@ _What questions (from above) can be answered using the data in this dataset?_
 **Dataset 2 (Vaccines):**
 
 Where did you download the data (e.g., a web URL)?
-From the web, on Kaggle.
-https://www.kaggle.com/paultimothymooney/usa-covid19-vaccinations 
+
+I downloaded the data from this link, on [Kaggle](https://www.kaggle.com/paultimothymooney/usa-covid19-vaccinations).
 
 _How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?_
+
 This data set is collected by “Our World in Data”, and they collected data about the current U.S residents and the vaccines distributed.
 
 _How many observations (rows) are in your data?_
+
 As of May 9th, there are 7693 observations.
 
 _How many features (columns) are in the data?_
+
 As of May 9th, there are 14 features.
 
 _What questions (from above) can be answered using the data in this dataset?_
