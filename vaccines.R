@@ -1,0 +1,5 @@
+rm(list = ls())
+library(dplyr)
+vaccines <- read.csv("data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
+number_rows <- nrow(vaccines)
+number_columns <- ncol(vaccines)
