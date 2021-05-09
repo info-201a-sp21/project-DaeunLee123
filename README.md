@@ -5,14 +5,14 @@ _Why are you interested in this field/domain?_
 We are interested in this field/domain because there are many aspects of COVID-19 that are important to track. Data on deaths and hospitalizations can indicate   the severity of the disease, while data on testing and confirmed cases can help track the spread of COVID-19. The disease has taken over the world, and in the United States we have seen the harsh impacts of the disease.
 
 _What other examples of data driven project have you found related to this domain (share at least 3)?_
-1. COVID deaths in the US
-2. COVID overall confirmed cases in the US
-3. COVID hospitalizations in the US
+1. (COVID Worldwide Data Set) [https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset]: This data set has daily information on the new and cumulative cases and deaths, up until the date January 22, 2020. The purpose of this project is to see if data can be used to track the spread of COVID within countries.
+2. (Recovered COVID Cases) [https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases]: The purpose of this data set it to record the number of people who have recovered from COVID, in order to track the severity of the disease.
+3. (Race and Ethnicities Affected by COVID) [https://data.world/liz-friedman/covid-racial-data-tracker-from-the-covid-tracking-project]: The purpose of this data set is to track the number of people within different races/ethnicities that developed COVID. Minorities are statistically shown to have less access to medical resources, so it is important to record if minorities are being disproportionately affected. 
 
 _What data-driven questions do you hope to answer about this domain?_
-1. What is proportion of people who tests positive for COVID and are hospitalized?
-2. Which state has the highest rate of testing?
-3. Which state has the highest death rate among COVID positive patients?
+1. **What is the proportion of people who tested positive for COVID-19 and are hospitalized?** This question can be answered by extracting data for those who are hospitalized and those who tested positive for COVID, and then dividing the two populations.
+2. **Do states have the capacity for COVID patients that need to be hospitalized?** This question can be answered by comparing data of the number of patients that are positive for COVID and need hospital care, to the number of hospital beds or equipment that is available.
+3. **What is the average survival rate of COVID per state?** This question can be answered by comparing the data of COVID recovered cases to COVID death rates. Hospital capacity and equipment availability may also play a role in this statistic.
 
 ## **Finding Data Questions:**
 
