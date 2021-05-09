@@ -1,6 +1,7 @@
 # Final Project
 ## **Domain of Interest Questions:**
 _Why are you interested in this field/domain?_
+
 We are interested in this field/domain because there are many aspects of COVID-19 that are important to track. Data on deaths and hospitalizations can indicate   the severity of the disease, while data on testing and confirmed cases can help track the spread of COVID-19. The disease has taken over the world, and in the United States we have seen the harsh impacts of the disease.
 
 _What other examples of data driven project have you found related to this domain (share at least 3)?_
@@ -15,7 +16,7 @@ _What data-driven questions do you hope to answer about this domain?_
 
 ## **Finding Data Questions:**
 
-*Dataset 1 (Testing):*
+**Dataset 1 (Testing):**
 
 _Where did you download the data (e.g., a web URL)?_
 https://covidtracking.com/data/download
@@ -34,7 +35,7 @@ _What questions (from above) can be answered using the data in this dataset?_
 - What is the number of overall positive test results in a specific state?
 - What is the number of overall negative test results in a specific state?
 
-*Dataset 2 (Vaccines):*
+**Dataset 2 (Vaccines):**
 
 Where did you download the data (e.g., a web URL)?
 From the web, on Kaggle.
