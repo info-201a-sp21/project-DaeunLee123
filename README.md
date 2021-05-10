@@ -47,7 +47,7 @@ I downloaded the data from this link, on [Kaggle](https://www.kaggle.com/paultim
 
 _How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?_
 
-This data set is collected by â€œOur World in Data?, and they collected data about the current U.S residents and the vaccines distributed.
+This data set is collected by Our World in Data?, and they collected data about the current U.S residents and the vaccines distributed.
 
 _How many observations (rows) are in your data?_
 
