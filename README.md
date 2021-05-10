@@ -47,7 +47,7 @@ I downloaded the data from this link, on [Kaggle](https://www.kaggle.com/paultim
 
 _How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?_
 
-This data set is collected by “Our World in Data”, and they collected data about the current U.S residents and the vaccines distributed.
+This data set is collected by “Our World in Data�?, and they collected data about the current U.S residents and the vaccines distributed.
 
 _How many observations (rows) are in your data?_
 
@@ -65,7 +65,8 @@ _What questions (from above) can be answered using the data in this dataset?_
 
 _Where did you download the data (e.g., a web URL)?_
 
-The data was downloaded from [data.gov](https://catalog.data.gov/dataset/covid-19-reported-patient-impact-and-hospital-capacity-by-state-b528c).
+The data was downloaded from [data.gov]
+(https://catalog.data.gov/dataset/covid-19-reported-patient-impact-and-hospital-capacity-by-state-b528c).
 
 _How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?_
 
@@ -80,7 +81,7 @@ _How many features (columns) are in the data?_
 
 There are 97 features in the data set.
 
-_What questions (from above) can be answered using the data in this dataset?_
+_What questions (from above) can be answered using the data in this data set?_
 - What is the critical staffing shortage of a certain state from the last 4 days?
 - Which state has the highest number of critical staffing shortages from the last 4 days?
 
