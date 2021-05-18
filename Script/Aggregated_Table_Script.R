@@ -19,9 +19,9 @@ aggregated_table <- function(dataframe) {
 df %>%
   group_by(State) %>%
   summarise(
-            total_vaccinations = sum(total_vaccinations),
-            total_distributed = sum(total_distributed),
-            total_people_vaccinated = sum(people_vaccinated),
+            total_vaccinations = max(total_vaccinations),
+            total_distributed = max(total_distributed),
+            total_people_vaccinated = max(people_vaccinated),
             mean_daily_vaccination = round(mean(daily_vaccinations), 0),
             population = mean(Pop)
             ) %>%
