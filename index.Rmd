@@ -1,6 +1,6 @@
 ---
 title: "Covid-19 Vaccination Report"
-author: "Lifan Liao"
+author: "Angella Kim, Danika Lee, Lifan Liao, Shunshun Yao"
 date: "2021/5/20"
 output: html_document
 ---
@@ -11,6 +11,7 @@ raw_df <- na.omit(read.csv("data/us_state_vaccinations.csv"))
 source("script/aggregated_table.R")
 source("script/Chart 1.R")
 source("script/Chart 2.R")
+source("script/Chart 3.R")
 ```
 
 
@@ -30,10 +31,32 @@ The table is sorted descending by the amount of total vaccination.
 kable(aggregated_table(raw_df))
 ```
 
+
+## Summary Charts
+
+### Chart 1
+
+
 ```{r echo=FALSE}
 chart_1(raw_df)
 ```
+- Chart 1 displays the total number of people that got vaccinated per state up until May 9th, 2021. 
+- Bar chart was used to help visualize the comparison of amount of vaccinated people among different states and identify states with the most vaccinated population and states with the lowest vaccinated population.
 
-```{r echo=FALSE}
+### Chart 2
+
+```{r echo=FALSE, warning=FALSE}
 chart_2(raw_df)
 ```
+
+- Chart 2 compares the population of each state with its vaccinated population up until May 9th, 2021. 
+- The grouped bar graph indicates the estimated amount of people who have not got their vaccination in each state and visually demonstrates the gap between total population and total vaccinated population on a state-wide level.
+
+### Chart 3
+
+```{r echo=FALSE, warning=FALSE}
+chart_3(raw_df)
+```
+
+- Chart 3 compares each state's total population with its calculated average daily vacccination given to the public up until May 9th, 2021.
+- The scatter plot graph helps establish a visible trend where readers can examine the relationship between each state's total population and calculated average daily vacccination given to the public.

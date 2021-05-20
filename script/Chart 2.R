@@ -10,7 +10,8 @@ population_vs_vaccination <- aggregated_table(df) %>%
   gather( key = total_people_vaccinated, value = population, -State)
 
 chart_2 <- ggplot(population_vs_vaccination) +
-  geom_col(mapping = aes(x = State, y = population, fill = total_people_vaccinated), position = "dodge")
+  geom_col(mapping = aes(x = State, y = population, fill = total_people_vaccinated), position = "dodge") +
+  coord_flip()
 return(chart_2)
 }
 
