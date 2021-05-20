@@ -1,6 +1,6 @@
 library("plotly")
 library("ggplot2")
-plot_ly(
+chart_1 <- plot_ly(
   data = Aggregated_table,
   x = ~State,
   y = ~total_people_vaccinated,
