@@ -1,0 +1,30 @@
+---
+title: "Covid-19 Vaccination Report"
+author: ""
+date: "2021/5/20"
+output: html_document
+---
+
+```{r include=FALSE}
+library("knitr")
+source("script/aggregated_table.R")
+```
+
+
+## Summary Table
+
+### Table intro
+
+This table contains aggregated Covid-19 vaccination information of 51 states in the US by May 9th, 2021. This table is grouped by states. The final number of vaccination by May 9th, 2021 and the mean daily vaccination are calculated, so that it is easy to compare the progress of Covid-19 vaccination between states. 
+
+The table is sorted descending by the amount of total vaccination.
+
+- California has the most vaccination by May 9th, 2021.
+- California has the largest amount of vaccine distributed by May 9th, 2021.
+
+
+```{r echo=FALSE}
+kable(aggregated_table)
+```
+
+
