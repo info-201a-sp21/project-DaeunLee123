@@ -11,6 +11,7 @@ raw_df <- na.omit(read.csv("data/us_state_vaccinations.csv"))
 source("script/aggregated_table.R")
 source("script/Chart 1.R")
 source("script/Chart 2.R")
+source("script/Chart 3.R")
 ```
 
 
