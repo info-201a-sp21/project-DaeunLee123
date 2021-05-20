@@ -39,14 +39,23 @@ kable(aggregated_table(raw_df))
 chart_1(raw_df)
 ```
 
+- Chart 1 displays the total number of people that got vaccinated per state up until May 9th, 2021. 
+- Bar chart was used to help visualize the comparison of amount of vaccinated people among different states and identify states with the most vaccinated population and states with the lowest vaccinated population.
+
 ### Chart 2
 
 ```{r echo=FALSE}
 chart_2(raw_df)
 ```
 
+- Chart 2 compares the population of each state with its vaccinated population up until May 9th, 2021. 
+- The grouped bar graph indicates the estimated amount of people who have not got their vaccination in each state and visually demonstrates the gap between total population and total vaccinated population on a state-wide level.
+
 ### Chart 3
 
 ```{r, echo=FALSE}
 chart_3(raw_df)
 ```
+
+- Chart 3 compares each state's total population with its calculated average daily vacccination given to the public up until May 9th, 2021.
+- The scatter plot graph helps establish a visible trend where readers can examine the relationship between each state's total population and calculated average daily vacccination given to the public.
