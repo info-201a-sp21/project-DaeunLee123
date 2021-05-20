@@ -1,6 +1,6 @@
 ---
 title: "Covid-19 Vaccination Report"
-author: "Lifan Liao"
+author: "Lifan Liao","Danika Lee","Angella Kim","Shunshun Yao"
 date: "2021/5/20"
 output: html_document
 ---
@@ -30,10 +30,22 @@ The table is sorted descending by the amount of total vaccination.
 kable(aggregated_table(raw_df))
 ```
 
+## Summary Charts
+
+### Chart 1
+
 ```{r echo=FALSE}
 chart_1(raw_df)
 ```
 
+### Chart 2
+
 ```{r echo=FALSE}
 chart_2(raw_df)
+```
+
+### Chart 3
+
+```{r, echo=FALSE}
+chart_3(raw_df)
 ```
