@@ -1,7 +1,10 @@
 library("plotly")
 library("ggplot2")
+source("script/aggregated_table.R")
+
+chart_1 <- function(df){
 plot_ly(
-  data = Aggregated_table,
+  data = aggregated_table(df),
   x = ~State,
   y = ~total_people_vaccinated,
   type = "bar",
@@ -13,3 +16,6 @@ plot_ly(
     xaxis = list(title = "State"),
     yaxis = list(title = "Number of People Vaccinated")
   )
+}
+
+

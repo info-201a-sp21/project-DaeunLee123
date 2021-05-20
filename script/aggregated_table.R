@@ -1,10 +1,9 @@
 library("dplyr")
 
-raw_df <- na.omit(read.csv("data/us_state_vaccinations.csv"))
-
 # group by location
 # sorted descending by total_vaccinations
 aggregated_table <- function(dataframe) {
+  raw_df <- na.omit(read.csv("data/us_state_vaccinations.csv"))
   raw_population_df <- read.csv("data/csvData.csv",
                                 fileEncoding = "UCS-2LE",
                                 check.names = F)
@@ -15,7 +14,7 @@ aggregated_table <- function(dataframe) {
   population_df <- raw_population_df[keeps]
   df <- merge(dataframe, population_df, by = "State")
 
-df %>%
+table <- df %>%
   group_by(State) %>%
   summarise(
             total_vaccinations = max(total_vaccinations),
@@ -25,6 +24,6 @@ df %>%
             population = mean(Pop)
             ) %>%
   arrange(desc(total_vaccinations))
+return(table)
 }
 
-aggregated_table <- aggregated_table(raw_df)

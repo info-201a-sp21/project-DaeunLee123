@@ -1,13 +1,16 @@
 ---
 title: "Covid-19 Vaccination Report"
-author: ""
+author: "Lifan Liao"
 date: "2021/5/20"
 output: html_document
 ---
 
 ```{r include=FALSE}
 library("knitr")
+raw_df <- na.omit(read.csv("data/us_state_vaccinations.csv"))
 source("script/aggregated_table.R")
+source("script/Chart 1.R")
+source("script/Chart 2.R")
 ```
 
 
@@ -24,7 +27,13 @@ The table is sorted descending by the amount of total vaccination.
 
 
 ```{r echo=FALSE}
-kable(aggregated_table)
+kable(aggregated_table(raw_df))
 ```
 
+```{r echo=FALSE}
+chart_1(raw_df)
+```
 
+```{r echo=FALSE}
+chart_2(raw_df)
+```
