@@ -3,7 +3,6 @@ library("dplyr")
 # group by location
 # sorted descending by total_vaccinations
 aggregated_table <- function(dataframe) {
-  raw_df <- na.omit(read.csv("data/us_state_vaccinations.csv"))
   raw_population_df <- read.csv("data/csvData.csv",
                                 fileEncoding = "UCS-2LE",
                                 check.names = F)
@@ -26,4 +25,3 @@ table <- df %>%
   arrange(desc(total_vaccinations))
 return(table)
 }
-
