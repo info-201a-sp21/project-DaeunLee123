@@ -2,7 +2,7 @@ library("ggplot2")
 library("plotly")
 source("script/aggregated_table.R")
 
-chart_3 <- function(df){
+chart_3 <- function(df) {
   chart_3 <- plot_ly(
     data = aggregated_table(df),
     x = ~population,
