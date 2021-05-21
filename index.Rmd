@@ -12,8 +12,27 @@ source("script/aggregated_table.R")
 source("script/Chart 1.R")
 source("script/Chart 2.R")
 source("script/Chart 3.R")
+source("script/summaryinfo.R")
 ```
 
+### Introduction
+Our problem domain revolves around the topic of COVID-19 and vaccination
+statistics. We are interested in this field/domain because there are many
+aspects of COVID-19 that are important to track. Data on vaccinations can help
+track the current situation of COVID-19, and as more and more people get
+vaccinated, data on this topic can allow us to know of a rough estimate as to
+how things will be like in the future. The disease has taken over the world,
+and in the United States we have seen the harsh impacts of the disease.
+Displaying vaccination statistics is a sign of hope that our lives will soon go
+back to normal. I downloaded the data from this link, on [Kaggle](https://www.kaggle.com/paultimothymooney/usa-covid19-vaccinations).
+This data set is collected by Our World in Data?, and they collected data about
+the current U.S residents and the vaccines distributed. As of May 9th, there are
+7693 observations and 14 features.
+
+## Summary
+```{r, echo=FALSE}
+summary_info(raw_df)
+```
 
 ## Summary Table
 
