@@ -12,7 +12,7 @@ chart_1 <- function(df) {
     hovertext = "y"
   ) %>%
     layout(
-      title = "Number of PeopleVaccinated per State",
+      title = "Number of People Vaccinated per State",
       xaxis = list(title = "State"),
       yaxis = list(title = "Number of People Vaccinated")
     )
