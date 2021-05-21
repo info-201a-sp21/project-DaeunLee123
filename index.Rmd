@@ -12,10 +12,38 @@ source("script/aggregated_table.R")
 source("script/Chart 1.R")
 source("script/Chart 2.R")
 source("script/Chart 3.R")
+source("script/summary.R")
+```
+
+```{r include=FALSE}
+summary <- summary_info(raw_df)
 ```
 
 
-## Summary Table
+### Introduction
+Our problem domain revolves around the topic of COVID-19 and vaccination
+statistics. We are interested in this field/domain because there are many
+aspects of COVID-19 that are important to track. Data on vaccinations can help
+track the current situation of COVID-19, and as more and more people get
+vaccinated, data on this topic can allow us to know of a rough estimate as to
+how things will be like in the future. The disease has taken over the world,
+and in the United States we have seen the harsh impacts of the disease.
+Displaying vaccination statistics is a sign of hope that our lives will soon go
+back to normal. I downloaded the data from this link, on [Kaggle](https://www.kaggle.com/paultimothymooney/usa-covid19-vaccinations).
+This data set is collected by Our World in Data, and they collected data about
+the current U.S residents and the vaccines distributed. As of May 9th, there are
+`r nrow(raw_df)` observations and `r ncol(raw_df)` features.
+
+
+Since our data set revolves around the COVID-19 vaccine statistics from each
+state in the U.S, the summary information that we calculated shows the average
+population of each state in the U.S, which is `r as.integer(summary$mean_pop)`. The average total people
+vaccinated in each state is `r as.integer(summary$mean_total)`. Using those two pieces of information, we were
+able to get the average percentage of vaccinated people per state compared to the number
+of residents, which turned out to be `r summary$avg_percent_pplpop`%. For further analysis,
+the mean for total vaccines in each state was `r as.integer(summary$mean_vac)`, making the average percentage of
+people vaccinated compared to the number of vaccines available per state `r summary$avg_percent_pplvac`%.
+
 
 ### Table intro
 
@@ -58,5 +86,7 @@ chart_2(raw_df)
 chart_3(raw_df)
 ```
 
-- Chart 3 compares each state's total population with its calculated average daily vacccination given to the public up until May 9th, 2021.
-- The scatter plot graph helps establish a visible trend where readers can examine the relationship between each state's total population and calculated average daily vacccination given to the public.
+- Chart 3 compares each state's total population with its calculated average daily vaccination given to the public up until May 9th, 2021.
+- The scatter plot graph helps establish a visible trend where readers can examine the relationship between each state's total population and calculated average daily vaccination given to the public.
+
+
