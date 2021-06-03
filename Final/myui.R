@@ -117,7 +117,7 @@ page_five <- tabPanel(
   vaccinated.", style = "font-family: 'Arial'; font-si16pt")
 )
 
-ui1 <- navbarPage("Coronavirus Vaccinations Visual Data",
+ui <- navbarPage("Coronavirus Vaccinations Visual Data",
                  page_one,
                  page_two,
                  page_three,
