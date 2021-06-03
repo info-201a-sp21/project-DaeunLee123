@@ -2,26 +2,27 @@ vaccines <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
 library("lintr")
 library("plotly")
-library("ggplot2")
-
-vaccine1 <- vaccines %>% mutate(month = format(as.Date(vaccines$date, format = 
-                                                         "%Y-%m-%d"), "%B")) %>%
-  filter(month == vaccines$date)
 
 server <- function(input, output) {
   output$dateplot <- renderPlotly({
+    monthly <- vaccines %>% mutate(month = format(as.Date(date,format = 
+                                                 "%Y-%m-%d"), "%B")) %>%
+      filter(month %in% input$month) %>%
+    group_by(month) %>% 
+      summarise(vaccines_month = sum(total_distributed, na.rm = TRUE))
+monthly$month <- factor(monthly$month, levels = c("January", "February",
+                                                  "March", "April", "May"))
+
   datechart <- plot_ly(
-    data = vaccines,
-    x = ~input$month,
-    y = ~total_distributed,
-    type = "scatter",
-    mode = "markers"
+    data = monthly,
+    x = ~month,
+    y = ~vaccines_month,
+    type = "bar"
   ) %>%
     layout(
       title = "Vaccines Distributed Per Month",
       xaxis = list(title = "Month"),
-      yaxis = list(title = "Total Distributed Vaccines")
-    )
+      yaxis = list(title = "Total Distributed Vaccines"))
   return(datechart)
   })
 }

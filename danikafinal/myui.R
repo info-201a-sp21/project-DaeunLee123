@@ -2,9 +2,8 @@ vaccine <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
 library("lintr")
 library("plotly")
-library("ggplot2")
 
-ui <- fluidPage(h1("Vaccination Interactive Page"
+ui <- fluidPage(h1("Vaccines Distributed By Months"
                    ),
                 h2("Introduction"
                    ),
@@ -21,22 +20,19 @@ ui <- fluidPage(h1("Vaccination Interactive Page"
                   ),
                 h2("Interactive Plot"
                    ),
-                selectInput(
+                checkboxGroupInput(
                   inputId="month",
                   label = h4("Choose a month:"),
                   choices = c("January",
                     "February",
                     "March",
                     "April",
-                    "May",
-                    "June",
-                    "July",
-                    "August",
-                    "September",
-                    "October",
-                    "November",
-                    "December"),
-                  selected = "January",
+                    "May"),
+                  selected = c("January",
+                  "February",
+                  "March",
+                  "April",
+                  "May")
                 ),
                 
                 plotlyOutput(
