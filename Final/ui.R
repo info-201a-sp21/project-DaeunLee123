@@ -151,8 +151,13 @@ page_five <- tabPanel(
     availability should increase overtime.", 
     style = "font-family: 'Arial'; font-si16pt"),
     tags$h2("Insight #2"),
-    tags$p("A description of the notable data-insight or pattern discovered in
-  your project"),
+    tags$p("For all states, the total number of vaccines distributed declines
+    over time. However, there are some states like Arkansas where the starting 
+    number of distributed vaccinations is less than the most recent recorded 
+    number. On the other hand, there are states such as Washington, whose most
+    recent recorded number is larger than its starting. This may indicate that 
+    the vaccine distribution rate per state varies, but overall there is less 
+    access to vaccinations."),
     tags$p("A specific piece of data, table, or chart that demonstrates the
     pattern/insight"),
     tags$p("The broader implications of the insight", style = "font-family:
