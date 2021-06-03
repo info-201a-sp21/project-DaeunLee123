@@ -5,7 +5,7 @@ library("plotly")
 library("ggplot2")
 library("dplyr")
 library("shinyWidgets")
-
+source("pie_chart.R")
 # Data set variables
 vaccine <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
@@ -30,14 +30,14 @@ page_one <- tabPanel(
     question include:", style = "font-family: 'Arial'; font-si16pt"),
     tags$p("1. What is the trend of total vaccinations in the United States by
     date?", style = "color:white"),
-<<<<<<< HEAD
+
     tags$p("2. What is the trend of total vaccinations in the United States by
     state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
         style = "color:white"),
     tags$p("3. What is the comparison between the number of people vaccinated
     vs. the total population, per state in the United States?
         (Source of data: Kaggle)", style = "color:white"),
-=======
+
     p("2. What is the trend of total vaccinations in the United States by
     state?", style = "color:white"),
     p("3. What is the comparison between the number of people vaccinated vs.
@@ -48,7 +48,7 @@ page_one <- tabPanel(
            "Kaggle"), ". From this data set on vaccinations in the 
            United States, a new dataset was created that specifically addresses 
            the components of vaccinations that this project is analyzing."),
->>>>>>> 65e6dcb66bdf426185515acced542fbc7120d3e8
+
   align = "center")
 )
 
@@ -108,7 +108,9 @@ page_four <- tabPanel(
     p("This chart shows the percentage of vaccinated people and unvaccinated 
     people of each state until May 9th, 2021. This chart can help people to 
     see the progress of Covid-19 vaccination"),
-    h2("Pie Chart")
+    h2("Pie Chart"),
+    selectInput("state_choice", "States", choices = df$State, selected = NULL),
+    plotlyOutput("piechart")
   )
 )
 
