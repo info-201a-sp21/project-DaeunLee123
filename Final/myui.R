@@ -2,15 +2,11 @@
 library("shiny")
 library("lintr")
 library("plotly")
-<<<<<<< HEAD
 library("ggplot2")
 library("dplyr")
-=======
 library("shinyWidgets")
->>>>>>> 4bb8fd7f7a5dbf8b7a7bf76175a7913c70d2a55c
 
 # Data set variables
-rm(list = ls())
 vaccine <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
 

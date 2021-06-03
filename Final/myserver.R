@@ -5,7 +5,6 @@ library("shiny")
 library("dplyr")
 
 # Data set variables
-rm(list = ls())
 vaccines <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
 
