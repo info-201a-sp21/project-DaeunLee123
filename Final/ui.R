@@ -17,10 +17,9 @@ page_one <- tabPanel(
   tags$style('.container-fluid {
                              background-color: #B0C4DE;
               }'),
-  titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
-    tags$img(src = "covidvaccine.png", height = 350, width = 800),
     tags$h1("Overview"),
+    tags$img(src = "covidvaccine.png", height = 350, width = 800),
     tags$p("The purpose of this project is to visually display data regarding
     Coronavirus vaccinations. These visual representations allow viewers to
     easily detect patterns within the dataset, which may have not been seen from
