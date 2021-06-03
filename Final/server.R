@@ -51,4 +51,13 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
   output$piechart <- renderPlotly({
     piechart(input$state_choice)
   })
-}
+
+# Vaccines by month table for insight
+
+  output$table1 <- renderTable({
+    group_by(data[month, vaccines_month]) %>%
+      count() %>% 
+      
+      colnames(table1) <- c("Month", "Total Number of Vaccinations Distributed")
+  })
+}    

@@ -150,6 +150,7 @@ page_five <- tabPanel(
     spike of COVID-19 cases from occurring, vaccination distribution rates and
     availability should increase overtime.", 
     style = "font-family: 'Arial'; font-si16pt"),
+    tableOutput(outputId = "table1"), 
     tags$h2("Insight #2"),
     tags$p("For all states, the total number of vaccines distributed declines
     over time. However, there are some states like Arkansas where the starting 
