@@ -21,7 +21,7 @@ ui <- fluidPage(h1("Vaccines Distributed By Months"
                 h2("Interactive Plot"
                    ),
                 checkboxGroupInput(
-                  inputId="month",
+                  inputId = "month",
                   label = h4("Choose a month:"),
                   choices = c("January",
                     "February",
@@ -34,7 +34,7 @@ ui <- fluidPage(h1("Vaccines Distributed By Months"
                   "April",
                   "May")
                 ),
-                
+
                 plotlyOutput(
                   outputId = "dateplot"
                 )
