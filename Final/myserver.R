@@ -3,10 +3,12 @@ library("lintr")
 library("plotly")
 library("shiny")
 library("dplyr")
+library("ggplot2")
 source("pie_chart.R")
 # Data set variables
 vaccines <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
+ata <- read.csv("../shunshunfinal/us-daily-covid-vaccine-doses-administered.csv")
 
 # Vaccines by month function
 server <- function(input, output) {
@@ -30,6 +32,16 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
       xaxis = list(title = "Month"),
       yaxis = list(title = "Total Distributed Vaccines"))
   return(datechart)
+  })
+}
+
+# Vaccination amount by state
+server <- function(input, output, ...) {
+  output$p <- renderPlotly({
+    plot_ly(data, x = ~Day, y = ~daily_vaccinations) %>%
+      filter(Entity %in% input$Entity) %>%
+      group_by(Entity) %>%
+      add_lines()
   })
 }
 
