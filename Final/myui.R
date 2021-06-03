@@ -2,6 +2,7 @@
 library("shiny")
 library("lintr")
 library("plotly")
+library("shinyWidgets")
 
 # Data set variables
 rm(list = ls())
@@ -11,7 +12,8 @@ vaccine <-
 # First page ui
 page_one <- tabPanel(
   "Home Page",
-  titlePanel("Coronavirus Vaccinations Visual Data"),
+  setBackgroundColor("light blue"),
+  titlePanel("Coronavirus Vaccinations Visual Data", align = "center"),
   mainPanel(
     tags$img(src = "covidvaccine.png", height = 50, width = 120),
     h1("Overview"),
@@ -24,13 +26,13 @@ page_one <- tabPanel(
     vaccinations that we will be answering and the source of data for each
     question include:", style = "font-family: 'Arial'; font-si16pt"),
     div("1. What is the trend of total vaccinations in the United States by
-    date? (Source of data: Kaggle", style = "color:blue"),
+    date? (Source of data: Kaggle)", style = "color:blue"),
     div("2. What is the trend of total vaccinations in the United States by
     state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
         style = "color:blue"),
     div("3. What is the comparison between the number of people vaccinated vs.
     the total population, per state in the United States?
-        (Source of data: Kaggle)", style = "color:blue"),
+        (Source of data: Kaggle)", style = "color:blue")
   )
 )
 
@@ -109,7 +111,7 @@ page_five <- tabPanel(
   page, on the interactive pie chart. The broader implications of this insight
   suggest that people may struggle to get vaccinated due to lack of resources
   per state, or that certain populations within states do not want to be
-  vaccinated.", style = "font-family: 'Arial'; font-si16pt"),
+  vaccinated.", style = "font-family: 'Arial'; font-si16pt")
 )
 
 ui <- navbarPage("Coronavirus Vaccinations Visual Data",
