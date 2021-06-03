@@ -30,12 +30,25 @@ page_one <- tabPanel(
     question include:", style = "font-family: 'Arial'; font-si16pt"),
     tags$p("1. What is the trend of total vaccinations in the United States by
     date?", style = "color:white"),
+<<<<<<< HEAD
     tags$p("2. What is the trend of total vaccinations in the United States by
     state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
         style = "color:white"),
     tags$p("3. What is the comparison between the number of people vaccinated
     vs. the total population, per state in the United States?
         (Source of data: Kaggle)", style = "color:white"),
+=======
+    p("2. What is the trend of total vaccinations in the United States by
+    state?", style = "color:white"),
+    p("3. What is the comparison between the number of people vaccinated vs.
+    the total population, per state in the United States?", 
+    style = "color:white"),
+    p("The source of data for the entirety of the project comes from", tags$a(
+      href="https://www.kaggle.com/paultimothymooney/usa-covid19-vaccinations", 
+           "Kaggle"), ". From this data set on vaccinations in the 
+           United States, a new dataset was created that specifically addresses 
+           the components of vaccinations that this project is analyzing."),
+>>>>>>> 65e6dcb66bdf426185515acced542fbc7120d3e8
   align = "center")
 )
 
