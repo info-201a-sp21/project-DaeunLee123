@@ -4,7 +4,7 @@ library("plotly")
 library("shiny")
 library("dplyr")
 library("ggplot2")
-source("pie_chart.R")
+
 # Data set variables
 vaccines <-
   read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
