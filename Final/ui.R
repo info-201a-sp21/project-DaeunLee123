@@ -159,10 +159,6 @@ page_five <- tabPanel(
     recent recorded number is larger than its starting. This may indicate that 
     the vaccine distribution rate per state varies, but overall there is less 
     access to vaccinations."),
-    tags$p("A specific piece of data, table, or chart that demonstrates the
-    pattern/insight"),
-    tags$p("The broader implications of the insight", style = "font-family:
-    'Arial'; font-si16pt"),
     tags$h2("Insight #3"),
     tags$p("The percentage of unvaccinated people is higher than vaccinated people
     in most states, as most states have 1/3 of their population vaccinated. This

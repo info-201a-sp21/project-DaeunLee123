@@ -55,9 +55,18 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
 # Vaccines by month table for insight
 
   output$table1 <- renderTable({
-    group_by(data[month, vaccines_month]) %>%
-      count() %>% 
-      
-      colnames(table1) <- c("Month", "Total Number of Vaccinations Distributed")
+    monthly <- vaccines %>% mutate(month = format(as.Date(date, format =
+                                                            "%Y-%m-%d"), "%B")) %>%
+    filter(month %in% input$month) %>%
+    group_by(month) %>%
+    summarise(vaccines_month = sum(total_distributed, na.rm = TRUE))
+    monthly$month <- factor(monthly$month, levels = c("January", "February",
+                                                      "March", "April", "May"))
+    table1visual <- select(
+      vaccines, month, vaccines_month
+    )
+    count() %>%
+    colnames(table1) <- c("Month", "Total Number of Vaccinations Distributed")
+    return(table1visual)
   })
 }    
