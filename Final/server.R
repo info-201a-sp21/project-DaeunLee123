@@ -59,14 +59,14 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
                                                           "%Y-%m-%d"), "%B")) %>%
     filter(month %in% input$month) %>%
     group_by(month) %>%
-  summarise(vaccines_month = sum(total_distributed, na.rm = TRUE))
-  monthly$month <- factor(monthly$month, levels = c("January", "February",
+    summarise(vaccines_month = sum(total_distributed, na.rm = TRUE))
+    monthly$month <- factor(monthly$month, levels = c("January", "February",
                                                     "March", "April", "May"))
   
 
   output$table1 <- renderDataTable({
     datatable(
-      vaccines,
+      monthly,
       colnames(table1) <- c("Month", "Total Number of Vaccinations Distributed")
     )
   })
