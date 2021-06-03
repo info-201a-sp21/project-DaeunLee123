@@ -1,6 +1,7 @@
 library("shiny")
 
-main <- fluidPage(
+page_one <- tabPanel(
+  "Home Page", 
   titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
     img(src = "covidvaccine.png", height = 50, width = 120),
@@ -56,6 +57,7 @@ page_five <- tabPanel(
 )
 
 ui <- navbarPage("Coronavirus Vaccinations Visual Data",
+                 page_one,
                  page_two,
                  page_three,
                  page_four,
