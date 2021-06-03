@@ -8,8 +8,8 @@ library("shinyWidgets")
 source("pie_chart.R")
 # Data set variables
 vaccine <-
-  read.csv("../data/us_state_vaccinations.csv", stringsAsFactors = FALSE)
-data <- read.csv("../shunshunfinal/us-daily-covid-vaccine-doses-administered.csv")
+  read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
+data <- read.csv("us-daily-covid-vaccine-doses-administered.csv")
 
 # First page ui
 page_one <- tabPanel(

@@ -1,9 +1,7 @@
-source("aggregated_table_forApp.R")
 library(dplyr)
 library(ggplot2)
 library(plotly)
-df <- na.omit(read.csv("../data/us_state_vaccinations.csv"))
-df <- aggregated_table(df)
+df <- read.csv("Aggregated table.csv")
 df$unvaccinated <- df$population - df$total_people_vaccinated
 piechart <- function(state) {
 test <- filter(df, State == state)
