@@ -45,15 +45,18 @@ page_five <- tabPanel(
     but starts to decline after April. This insight can be seen on the 'Vaccinations 
     by Date' page, on the interactive graph. The broader implications of this insight 
     is that the majority of the United States received their vaccinations early on, as
-    there were more resources and availability."),
+    there were more resources and availability.", style = "font-family: 'Arial'; font-si16pt"),
   h2("Takeaway #2"),
   p("A description of the notable data-insight or pattern discovered in your project"),
   p("A specific piece of data, table, or chart that demonstrates the pattern/insight"),
-  p("The broader implications of the insight"),
+  p("The broader implications of the insight", style = "font-family: 'Arial'; font-si16pt"),
   h2("Takeaway #3"),
-  p("A description of the notable data-insight or pattern discovered in your project"),
-  p("A specific piece of data, table, or chart that demonstrates the pattern/insight"),
-  p("The broader implications of the insight"),
+  p("The percentage of unvaccinated people is higher than vaccinated people in most states, 
+  as most states have 1/3 of their population vaccinated.This insight can be seen on the 
+    'Percentage of Vaccinated Population by State' page, on the interactive pie chart. The
+    broader implications of this insight suggest that people may struggle to get vaccinated 
+    due to lack of resources per state, or that certain populations within states do not want
+    to be vaccinated.", style = "font-family: 'Arial'; font-si16pt"),
 )
 
 ui <- navbarPage("Coronavirus Vaccinations Visual Data",
