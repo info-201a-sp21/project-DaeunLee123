@@ -2,6 +2,8 @@
 library("shiny")
 library("lintr")
 library("plotly")
+library("ggplot2")
+library("dplyr")
 
 # Data set variables
 rm(list = ls())
@@ -56,34 +58,36 @@ page_two <- tabPanel(
   ),
 
 # Adding in the bar graph
-  checkboxGroupInput(
-    inputId = "month",
-    label = h4("Choose a month:"),
-    choices = c("January",
-                "February",
-                "March",
-                "April",
-                "May"),
-    selected = c("January",
-                 "February",
-                 "March",
-                 "April",
-                 "May")),
-
+checkboxGroupInput(
+  inputId = "month",
+  label = h4("Choose a month:"),
+  choices = c("January",
+              "February",
+              "March",
+              "April",
+              "May"),
+  selected = c("January",
+               "February",
+               "March",
+               "April",
+               "May")),
   plotlyOutput(
-    outputId = "dateplot")))
+    outputId = "dateplot")
+))
+
 
 # Third page ui
 page_three <- tabPanel(
   "Vaccinations by State",
-
+  
 )
 
 # Fourth page ui
 page_four <- tabPanel(
   "Percentage of Vaccinated Population by State",
-
+  
 )
+
 
 # Last page ui
 page_five <- tabPanel(
@@ -112,7 +116,7 @@ page_five <- tabPanel(
   vaccinated.", style = "font-family: 'Arial'; font-si16pt"),
 )
 
-ui <- navbarPage("Coronavirus Vaccinations Visual Data",
+ui1 <- navbarPage("Coronavirus Vaccinations Visual Data",
                  page_one,
                  page_two,
                  page_three,

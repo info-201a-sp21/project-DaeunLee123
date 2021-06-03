@@ -2,6 +2,8 @@
 library("shiny")
 library("lintr")
 library("plotly")
+library("ggplot2")
+library("dplyr")
 
 # Data set variables
 rm(list = ls())
