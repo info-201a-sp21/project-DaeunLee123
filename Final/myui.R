@@ -14,12 +14,12 @@ vaccine <-
 page_one <- tabPanel(
   "Home Page",
   tags$style('.container-fluid {
-                             background-color: #B0E0E6;
+                             background-color: #B0C4DE;
               }'),
   titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
-    tags$img(src = "covidvaccine.png", height = 50, width = 120),
-    tags$h1("Overview", align = "center"),
+    tags$img(src = "covidvaccine.png", height = 350, width = 800),
+    tags$h1("Overview"),
     tags$p("The purpose of this project is to visually display data regarding
     Coronavirus vaccinations. These visual representations allow viewers to
     easily detect patterns within the dataset, which may have not been seen from
@@ -28,15 +28,15 @@ page_one <- tabPanel(
     of the virus and its devistating effects. The major questions regarding
     vaccinations that we will be answering and the source of data for each
     question include:", style = "font-family: 'Arial'; font-si16pt"),
-    div("1. What is the trend of total vaccinations in the United States by
-    date? (Source of data: Kaggle)", style = "color:blue"),
-    div("2. What is the trend of total vaccinations in the United States by
+    p("1. What is the trend of total vaccinations in the United States by
+    date?", style = "color:white"),
+    p("2. What is the trend of total vaccinations in the United States by
     state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
-        style = "color:blue"),
-    div("3. What is the comparison between the number of people vaccinated vs.
+        style = "color:white"),
+    p("3. What is the comparison between the number of people vaccinated vs.
     the total population, per state in the United States?
-        (Source of data: Kaggle)", style = "color:blue")
-  )
+        (Source of data: Kaggle)", style = "color:white"),
+  align = "center")
 )
 
 # Second page ui
