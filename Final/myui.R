@@ -13,10 +13,10 @@ vaccine <-
 page_one <- tabPanel(
   "Home Page",
   setBackgroundColor("light blue"),
-  titlePanel("Coronavirus Vaccinations Visual Data", align = "center"),
+  titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
     tags$img(src = "covidvaccine.png", height = 50, width = 120),
-    h1("Overview"),
+    h1("Overview", align = "center"),
     p("The purpose of this project is to visually display data regarding
     Coronavirus vaccinations. These visual representations allow viewers to
     easily detect patterns within the dataset, which may have not been seen from
@@ -89,7 +89,7 @@ page_four <- tabPanel(
 
 # Last page ui
 page_five <- tabPanel(
-  "Overview",
+  "Conclusion",
   h2("Takeaway #1"),
   p("The total number of distributed vaccines rises from the start of the
   year, but starts to decline after April. This insight can be seen on the
