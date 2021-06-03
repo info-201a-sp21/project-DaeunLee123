@@ -7,7 +7,7 @@ library("dplyr")
 # Data set variables
 vaccines <-
   read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
-data <- read.csv("us-daily-covid-vaccine-doses-administered.csv")
+data <- as.data.frame(read.csv("us-daily-covid-vaccine-doses-administered.csv"))
 
 # Load the server and ui
 source("ui.R")

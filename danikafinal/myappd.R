@@ -6,6 +6,6 @@ vaccines <-
 
 # Load the server and ui
 source("myui.R")
-source("myserver.R")
+source("myserverd.R")
 
 shinyApp(ui = ui, server = server)

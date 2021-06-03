@@ -9,7 +9,7 @@ source("pie_chart.R")
 # Data set variables
 vaccine <-
   read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
-data <- read.csv("us-daily-covid-vaccine-doses-administered.csv")
+data <- as.data.frame(read.csv("us-daily-covid-vaccine-doses-administered.csv"))
 
 # First page ui
 page_one <- tabPanel(
@@ -107,7 +107,7 @@ page_three <- tabPanel(
                   selected = "Alabama",
                   multiple = TRUE
                 ),
-                plotlyOutput(outputId = "p")
+                plotlyOutput("p")
               )
 )
 

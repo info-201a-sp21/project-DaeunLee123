@@ -9,7 +9,7 @@ library("ggplot2")
 vaccines <-
   read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
 ata <- read.csv("us-daily-covid-vaccine-doses-administered.csv")
-
+data <- as.data.frame(read.csv("us-daily-covid-vaccine-doses-administered.csv"))
 # Vaccines by month function
 server <- function(input, output) {
   output$dateplot <- renderPlotly({
@@ -33,22 +33,21 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
       yaxis = list(title = "Total Distributed Vaccines"))
   return(datechart)
   })
-}
+
 
 # Vaccination amount by state
-server <- function(input, output, ...) {
+
   output$p <- renderPlotly({
-    plot_ly(data, x = ~Day, y = ~daily_vaccinations) %>%
+  plot_ly(data, x = ~Day, y = ~daily_vaccinations) %>%
       filter(Entity %in% input$Entity) %>%
       group_by(Entity) %>%
       add_lines()
   })
-}
+
 
 # Vaccine percentage by state
-server <- function(input, output) {
+
   output$piechart <- renderPlotly({
     piechart(input$state_choice)
   })
-  
 }
