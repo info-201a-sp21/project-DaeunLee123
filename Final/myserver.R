@@ -32,3 +32,11 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
   return(datechart)
   })
 }
+
+# Vaccine percentage by state
+server <- function(input, output) {
+  output$piechart <- renderPlotly({
+    piechart(input$state_choice)
+  })
+  
+}

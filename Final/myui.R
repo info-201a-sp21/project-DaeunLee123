@@ -30,7 +30,19 @@ page_one <- tabPanel(
     question include:", style = "font-family: 'Arial'; font-si16pt"),
     tags$p("1. What is the trend of total vaccinations in the United States by
     date?", style = "color:white"),
+<<<<<<< HEAD
     tags$p("2. What is the trend of total vaccinations in the United States by
+=======
+<<<<<<< HEAD
+    tags$p("2. What is the trend of total vaccinations in the United States by
+    state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
+        style = "color:white"),
+    tags$p("3. What is the comparison between the number of people vaccinated
+    vs. the total population, per state in the United States?
+        (Source of data: Kaggle)", style = "color:white"),
+=======
+    p("2. What is the trend of total vaccinations in the United States by
+>>>>>>> 737222a6d49f0fdda4c23ae9866f745549925d29
     state?", style = "color:white"),
     tags$p("3. What is the comparison between the number of people vaccinated vs.
     the total population, per state in the United States?", 
@@ -40,7 +52,12 @@ page_one <- tabPanel(
            "Kaggle"), ". From this data set on vaccinations in the 
            United States, a new dataset was created that specifically addresses 
            the components of vaccinations that this project is analyzing."),
+<<<<<<< HEAD
     align = "center")
+=======
+>>>>>>> 65e6dcb66bdf426185515acced542fbc7120d3e8
+  align = "center")
+>>>>>>> 737222a6d49f0fdda4c23ae9866f745549925d29
 )
 
 # Second page ui
@@ -92,7 +109,15 @@ page_three <- tabPanel(
 # Fourth page ui
 page_four <- tabPanel(
   "Percentage of Vaccinated Population by State",
-  
+  ui <- fluidPage(
+    h1("Percentage of Vaccinated People and Unvaccinated People by States"),
+    h2("Introduction"),
+    h5("What is the percentage of vaccinated people of each state?"),
+    p("This chart shows the percentage of vaccinated people and unvaccinated 
+    people of each state until May 9th, 2021. This chart can help people to 
+    see the progress of Covid-19 vaccination"),
+    h2("Pie Chart")
+  )
 )
 
 

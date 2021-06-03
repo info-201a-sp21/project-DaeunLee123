@@ -12,5 +12,6 @@ vaccines <-
 # Load the server and ui
 source("myui.R")
 source("myserver.R")
+source("pie_chart.R")
 
 shinyApp(ui = ui, server = server)
