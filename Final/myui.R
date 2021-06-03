@@ -13,7 +13,9 @@ vaccine <-
 # First page ui
 page_one <- tabPanel(
   "Home Page",
-  setBackgroundColor("light blue"),
+  tags$style('.container-fluid {
+                             background-color: #B0E0E6;
+              }'),
   titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
     tags$img(src = "covidvaccine.png", height = 50, width = 120),
