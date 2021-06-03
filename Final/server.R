@@ -54,7 +54,6 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
 # Vaccines by month table for insight
 
   output$table1 <- DT::renderDataTable({
-    Sys.setlocale("LC_ALL", "English")
     x <- c("January", "February", "March", "April", "May")
     cnames <- c("Month", "Total Number of Vaccinations Distributed")
     monthly <- vaccines %>% mutate(month = format(as.Date(date, format = 
