@@ -8,7 +8,7 @@ library("DT")
 
 # Data set variables
 vaccines <-
-  read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
+  na.omit(read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE))
 data <- as.data.frame(read.csv("us-daily-covid-vaccine-doses-administered.csv"))
 
 # Load the server and ui

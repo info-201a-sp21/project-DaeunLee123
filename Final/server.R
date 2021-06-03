@@ -7,9 +7,8 @@ library("ggplot2")
 library("DT")
 
 # Data set variables
-vaccines <-
-  read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)
-ata <- read.csv("us-daily-covid-vaccine-doses-administered.csv")
+vaccines <- na.omit(read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE))
+
 data <- as.data.frame(read.csv("us-daily-covid-vaccine-doses-administered.csv"))
 # Vaccines by month function
 server <- function(input, output) {
@@ -54,10 +53,16 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
 
 # Vaccines by month table for insight
 
-  output$table1 <- renderTable({
-    group_by(data[month, vaccines_month]) %>%
-      count() %>% 
-      
-      colnames(table1) <- c("Month", "Total Number of Vaccinations Distributed")
+  output$table1 <- DT::renderDataTable({
+    Sys.setlocale("LC_ALL", "English")
+    x <- c("January", "February", "March", "April", "May")
+    cnames <- c("Month", "Total Number of Vaccinations Distributed")
+    monthly <- vaccines %>% mutate(month = format(as.Date(date, format = 
+                                                            "%Y-%m-%d"), "%B")) %>%
+      group_by(month) %>%
+      summarise(vaccines_month = sum(total_distributed, na.rm = TRUE)) %>%
+      slice(match(x, month))
+    colnames(monthly) <- cnames
+    return(monthly)
   })
 }    
