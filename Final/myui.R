@@ -2,8 +2,12 @@
 library("shiny")
 library("lintr")
 library("plotly")
+<<<<<<< HEAD
 library("ggplot2")
 library("dplyr")
+=======
+library("shinyWidgets")
+>>>>>>> 4bb8fd7f7a5dbf8b7a7bf76175a7913c70d2a55c
 
 # Data set variables
 rm(list = ls())
@@ -13,10 +17,11 @@ vaccine <-
 # First page ui
 page_one <- tabPanel(
   "Home Page",
+  setBackgroundColor("light blue"),
   titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
     tags$img(src = "covidvaccine.png", height = 50, width = 120),
-    h1("Overview"),
+    h1("Overview", align = "center"),
     p("The purpose of this project is to visually display data regarding
     Coronavirus vaccinations. These visual representations allow viewers to
     easily detect patterns within the dataset, which may have not been seen from
@@ -26,13 +31,13 @@ page_one <- tabPanel(
     vaccinations that we will be answering and the source of data for each
     question include:", style = "font-family: 'Arial'; font-si16pt"),
     div("1. What is the trend of total vaccinations in the United States by
-    date? (Source of data: Kaggle", style = "color:blue"),
+    date? (Source of data: Kaggle)", style = "color:blue"),
     div("2. What is the trend of total vaccinations in the United States by
     state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
         style = "color:blue"),
     div("3. What is the comparison between the number of people vaccinated vs.
     the total population, per state in the United States?
-        (Source of data: Kaggle)", style = "color:blue"),
+        (Source of data: Kaggle)", style = "color:blue")
   )
 )
 
@@ -91,7 +96,7 @@ page_four <- tabPanel(
 
 # Last page ui
 page_five <- tabPanel(
-  "Overview",
+  "Conclusion",
   h2("Takeaway #1"),
   p("The total number of distributed vaccines rises from the start of the
   year, but starts to decline after April. This insight can be seen on the
@@ -113,7 +118,7 @@ page_five <- tabPanel(
   page, on the interactive pie chart. The broader implications of this insight
   suggest that people may struggle to get vaccinated due to lack of resources
   per state, or that certain populations within states do not want to be
-  vaccinated.", style = "font-family: 'Arial'; font-si16pt"),
+  vaccinated.", style = "font-family: 'Arial'; font-si16pt")
 )
 
 ui1 <- navbarPage("Coronavirus Vaccinations Visual Data",
