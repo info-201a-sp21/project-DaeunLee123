@@ -28,13 +28,13 @@ page_one <- tabPanel(
     of the virus and its devistating effects. The major questions regarding
     vaccinations that we will be answering and the source of data for each
     question include:", style = "font-family: 'Arial'; font-si16pt"),
-    p("1. What is the trend of total vaccinations in the United States by
+    tags$p("1. What is the trend of total vaccinations in the United States by
     date?", style = "color:white"),
-    p("2. What is the trend of total vaccinations in the United States by
+    tags$p("2. What is the trend of total vaccinations in the United States by
     state? (Source of data: project-DauenLee123/data/aggregated table.csv)",
         style = "color:white"),
-    p("3. What is the comparison between the number of people vaccinated vs.
-    the total population, per state in the United States?
+    tags$p("3. What is the comparison between the number of people vaccinated
+    vs. the total population, per state in the United States?
         (Source of data: Kaggle)", style = "color:white"),
   align = "center")
 )
@@ -88,7 +88,15 @@ page_three <- tabPanel(
 # Fourth page ui
 page_four <- tabPanel(
   "Percentage of Vaccinated Population by State",
-  
+  ui <- fluidPage(
+    h1("Percentage of Vaccinated People and Unvaccinated People by States"),
+    h2("Introduction"),
+    h5("What is the percentage of vaccinated people of each state?"),
+    p("This chart shows the percentage of vaccinated people and unvaccinated 
+    people of each state until May 9th, 2021. This chart can help people to 
+    see the progress of Covid-19 vaccination"),
+    h2("Pie Chart")
+  )
 )
 
 
