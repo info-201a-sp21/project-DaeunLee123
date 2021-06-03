@@ -4,6 +4,8 @@ library("lintr")
 library("plotly")
 library("ggplot2")
 library("dplyr")
+library("DT")
+
 # Data set variables
 vaccines <-
   read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE)

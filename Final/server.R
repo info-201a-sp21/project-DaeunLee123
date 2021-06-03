@@ -4,6 +4,7 @@ library("plotly")
 library("shiny")
 library("dplyr")
 library("ggplot2")
+library("DT")
 
 # Data set variables
 vaccines <-
