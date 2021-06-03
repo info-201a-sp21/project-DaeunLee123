@@ -1,0 +1,5 @@
+source("pie_chart.R")
+source("myui.R")
+source("myserver.R")
+library(shiny)
+shinyApp(ui = ui, server = server)
