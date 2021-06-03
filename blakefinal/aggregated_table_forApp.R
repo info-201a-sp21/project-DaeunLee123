@@ -9,8 +9,7 @@ aggregated_table <- function(dataframe) {
 
   colnames(dataframe)[2] <- "State"
 
-  keeps <- c("State", "Pop")
-  population_df <- raw_population_df[keeps]
+  population_df <- raw_population_df[, c(1:2)]
   df <- merge(dataframe, population_df, by = "State")
 
 table <- df %>%
