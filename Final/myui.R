@@ -17,8 +17,8 @@ page_one <- tabPanel(
   titlePanel("Coronavirus Vaccinations Visual Data"),
   mainPanel(
     tags$img(src = "covidvaccine.png", height = 50, width = 120),
-    h1("Overview", align = "center"),
-    p("The purpose of this project is to visually display data regarding
+    tags$h1("Overview", align = "center"),
+    tags$p("The purpose of this project is to visually display data regarding
     Coronavirus vaccinations. These visual representations allow viewers to
     easily detect patterns within the dataset, which may have not been seen from
     a datatable. Although many aspects of Coronavirus are important to track,
@@ -42,11 +42,11 @@ page_two <- tabPanel(
   "Vaccinations by Month",
   ui <- fluidPage(h1("Vaccines Distributed By Months"
   ),
-  h2("Introduction"
+  tags$h2("Introduction"
   ),
-  h5("What is the trend of total vaccinations in the United States
+  tags$h5("What is the trend of total vaccinations in the United States
                    by date?"),
-  p("This chart attempts understand the relationship between time
+  tags$p("This chart attempts understand the relationship between time
                 and the total number of vaccines distributed. In this case, we
                 can further ask, does time and the number of
                   vaccines distributed have a direct correlation? I chose this
@@ -55,7 +55,7 @@ page_two <- tabPanel(
                   ways the variables interacted with each other, especially
                   because one of the variables was time."
   ),
-  h2("Interactive Plot"
+  tags$h2("Interactive Plot"
   ),
 
 # Adding in the bar graph
@@ -93,22 +93,22 @@ page_four <- tabPanel(
 # Last page ui
 page_five <- tabPanel(
   "Conclusion",
-  h2("Takeaway #1"),
-  p("The total number of distributed vaccines rises from the start of the
+  tags$h2("Takeaway #1"),
+  tags$p("The total number of distributed vaccines rises from the start of the
   year, but starts to decline after April. This insight can be seen on the
     'Vaccinations by Date' page, on the interactive graph. The broader
     implications of this insight is that the majority of the United States
     received their vaccinations early on, as there were more resources and
     availability.", style = "font-family: 'Arial'; font-si16pt"),
-  h2("Takeaway #2"),
-  p("A description of the notable data-insight or pattern discovered in
+  tags$h2("Takeaway #2"),
+  tags$p("A description of the notable data-insight or pattern discovered in
   your project"),
-  p("A specific piece of data, table, or chart that demonstrates the
+  tags$p("A specific piece of data, table, or chart that demonstrates the
     pattern/insight"),
-  p("The broader implications of the insight", style = "font-family:
+  tags$p("The broader implications of the insight", style = "font-family:
     'Arial'; font-si16pt"),
-  h2("Takeaway #3"),
-  p("The percentage of unvaccinated people is higher than vaccinated people
+  tags$h2("Takeaway #3"),
+  tags$p("The percentage of unvaccinated people is higher than vaccinated people
   in most states, as most states have 1/3 of their population vaccinated. This
   insight can be seen on the 'Percentage of Vaccinated Population by State'
   page, on the interactive pie chart. The broader implications of this insight
@@ -117,7 +117,7 @@ page_five <- tabPanel(
   vaccinated.", style = "font-family: 'Arial'; font-si16pt")
 )
 
-ui <- navbarPage("Coronavirus Vaccinations Visual Data",
+ui <- navbarPage(theme = "style.css", "Coronavirus Vaccinations Visual Data",
                  page_one,
                  page_two,
                  page_three,
