@@ -80,6 +80,8 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
   })
 }    
 
+# Vaccinated population table for insight
+  
 
 
 
