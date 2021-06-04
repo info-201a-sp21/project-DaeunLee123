@@ -64,4 +64,23 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
     colnames(monthly) <- cnames
     return(monthly)
   })
+  
+# Vaccines by state table for insight
+  
+  statetable_df <- data %>% filter(Entity %in% c("Arkansas", "Washington"))
+  
+  output$table2 <- DT::renderDataTable({
+    x <- c("Arkansas", "Washington")
+    cnames <- c("State", "Date", "Total Vaccinations")
+    date <- statetable_df %>% filter(Day %in% c("2021-01-13", "2021-06-02")) %>%
+    group_by(Day) %>% 
+    slice(match(x, Entity))
+    colnames(date) <- cnames
+    return(date)
+  })
 }    
+
+
+
+
+
