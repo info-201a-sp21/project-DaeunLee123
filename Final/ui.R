@@ -17,16 +17,16 @@ page_one <- tabPanel(
   tags$style('.container-fluid {
                              background-color: #B0C4DE;
               }'),
-  titlePanel("Coronavirus Vaccinations Visual Data"),
+  titlePanel("COVID-19 Vaccinations Visual Data"),
   mainPanel(
     fluidRow(
       align = "center",
       tags$img(src = "covidvaccine.png", height = 350, width = 800),
       tags$h1("Overview"),
       tags$p("The purpose of this project is to visually display data regarding
-      Coronavirus vaccinations. These visual representations allow viewers to
+      COVID-19 vaccinations. These visual representations allow viewers to
      easily detect patterns within the dataset, which may have not been seen from
-      a datatable. Although many aspects of Coronavirus are important to track,
+      a datatable. Although many aspects of COVID-19 are important to track,
       data on vaccinations can indicate its effectiveness with slowing the spread
      of the virus and its devistating effects. The major questions regarding
       vaccinations that we will be answering include:", 
@@ -61,14 +61,12 @@ page_two <- tabPanel(
     ),
     tags$h5("What is the trend of total vaccinations in the United States
                      by date?", style = "color:white"),
-    tags$p("This chart attempts understand the relationship between time
+    tags$p("This chart illustrates the relationship between time
                   and the total number of vaccines distributed, up to the date May
-                  31, 2021. Using this data, we can further ask, 'does time and 
-                  the number of vaccines distributed have a direct correlation?'
-                  This chart type was chosen to demonstrate the visuals for this 
-                  question because it effectively shows users in what
-                  ways the variables interacted with each other, which is 
-                  especially important as one of the variables is time."
+                  31, 2021. The data in this plot helps to visualize the trend of
+                  vaccinations over time. This chart type was chosen to illustrate
+                  the answer for this question because it effectively shows users 
+                  how the distribution of vaccines has changed over time."
     ),
     tags$h2("Interactive Plot"
     )
@@ -106,11 +104,11 @@ page_three <- tabPanel(
                   comparisons between states' daily vaccination rates by 
                   selecting desired states and seeing its corresponding
                   linear graph through the date June 2, 2021. This type of graph
-                  was chosen because of its visual ease and convience when 
-                  making comparisons to draw conclusions. The intention of this
-                  interactive page is to inform the public on daily vaccination
-                  rates through participation in searching and choosing specific
-                  states using the widget."),
+                  was chosen because of its visual effectiveness and convience 
+                  when making comparisons to draw conclusions. The intention of 
+                  this interactive page is to inform the public on daily 
+                  vaccination rates through participation in searching and 
+                  choosing specific states using the widget."),
                 h2("Interactive Graph"),
                 selectizeInput(
                   inputId = "Entity", 
@@ -137,7 +135,7 @@ page_four <- tabPanel(
       p("This interactive chart displays the comparison of the vaccinated 
       and unvaccinated population of each state through the date of May 9th, 2021. 
       A pie chart was chosen to show this comparison, as it is an effective 
-      communcattion tool by representing data visually as part-to-whole
+      communcation tool by representing data visually as part-to-whole
       relationship. Additionally it provides the intended comparison in both
       percentages and population number, allowing the data to be interpretted in
       multiple ways. The comparison shown from this chart allows viewers to be
@@ -163,32 +161,31 @@ page_five <- tabPanel(
     insight is that the majority of the United States received their vaccinations 
     early on, as there were more resources and availability. To prevent another
     spike of COVID-19 cases from occurring, vaccination distribution rates and
-    availability should increase overtime.", 
+    availability should increase over time.", 
     style = "font-family: 'Arial'; font-si16pt"),
     DT::dataTableOutput("table1"), 
     tags$h2("Insight #2"),
     tags$p("For all states, the total number of vaccines distributed declines
-    over time. However, there are some states like Arkansas where the starting 
-    number of distributed vaccinations is less than the most recent recorded 
-    number. On the other hand, there are states such as Washington, whose most
-    recent recorded number is larger than its starting. This may indicate that 
-    the vaccine distribution rate per state varies, but overall there is less 
-    access to vaccinations."),
+    over time. Additionally, there are some states like Arkansas where the 
+    starting number of distributed vaccines (on January 13) is less than the 
+    most recent recorded number (on June 2). On the other hand, there are states
+    such as Washington, whose most recent recorded number is larger than its 
+    starting number. This may indicate that the vaccine distribution rate per 
+    state varies, but overall there is less access to vaccinations."),
     DT::dataTableOutput("table2"),
     tags$h2("Insight #3"),
     tags$p("The percentage of unvaccinated people is higher than vaccinated people
-    in most states, as most states have 1/3 of their population vaccinated. This
-    insight can be seen on the 'Percentage of Vaccinated Population by State'
-    page, on the interactive pie chart. The broader implications of this insight
-    suggest that people may struggle to get vaccinated due to lack of resources
-    per state, or that certain populations within states do not want to be
-    vaccinated.", style = "font-family: 'Arial'; font-si16pt")
+    in most states, as most states have 1/3 of their population vaccinated. The 
+    broader implications of this insight could suggest that people may struggle 
+    to get vaccinated due to lack of resources per state, or that certain 
+    populations within states do not want to be vaccinated.", 
+           style = "font-family: 'Arial'; font-si16pt")
     ), width = 12,
     DT::dataTableOutput("table3")
   )
 )
   
-ui <- navbarPage(theme = "style.css", "Coronavirus Vaccinations Visual Data",
+ui <- navbarPage(theme = "style.css", "COVID-19 Vaccinations Visual Data",
                  page_one,
                  page_two,
                  page_three,

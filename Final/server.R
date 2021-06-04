@@ -42,8 +42,7 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
       filter(Entity %in% input$Entity) %>%
       group_by(Entity) %>%
       add_lines()
-  })
-
+  }) 
 
 # Vaccine percentage by state
 
