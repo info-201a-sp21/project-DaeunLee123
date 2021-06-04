@@ -105,7 +105,7 @@ page_three <- tabPanel(
                 p("The interactive graph enables the audience to make direct
                   comparisons between states' daily vaccination rates by 
                   selecting desired states and seeing its corresponding
-                  linear graph through the date May 31, 2021. This type of graph
+                  linear graph through the date June 2, 2021. This type of graph
                   was chosen because of its visual ease and convience when 
                   making comparisons to draw conclusions. The intention of this
                   interactive page is to inform the public on daily vaccination
