@@ -183,7 +183,8 @@ page_five <- tabPanel(
     suggest that people may struggle to get vaccinated due to lack of resources
     per state, or that certain populations within states do not want to be
     vaccinated.", style = "font-family: 'Arial'; font-si16pt")
-    ), width = 12
+    ), width = 12,
+    DT::dataTableOutput("table3")
   )
 )
   

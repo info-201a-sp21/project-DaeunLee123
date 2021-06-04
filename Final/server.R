@@ -8,7 +8,7 @@ library("DT")
 
 # Data set variables
 vaccines <- na.omit(read.csv("us_state_vaccinations.csv", stringsAsFactors = FALSE))
-
+df <- read.csv("Aggregated table.csv")
 data <- as.data.frame(read.csv("us-daily-covid-vaccine-doses-administered.csv"))
 # Vaccines by month function
 server <- function(input, output) {
@@ -78,9 +78,15 @@ monthly$month <- factor(monthly$month, levels = c("January", "February",
     colnames(date) <- cnames
     return(date)
   })
-}    
-
+  
 # Vaccinated population table for insight
+  output$table3 <- DT::renderDataTable({
+    table3 <- df %>%
+      group_by(State) %>%
+      summarise(percentage = round(100*(total_people_vaccinated/population), 1))
+    return(table3)
+  })
+}    
   
 
 
