@@ -60,7 +60,7 @@ page_two <- tabPanel(
     tags$h2("Introduction"
     ),
     tags$h5("What is the trend of total vaccinations in the United States
-                     by date?"),
+                     by date?", style = "color:white"),
     tags$p("This chart attempts understand the relationship between time
                   and the total number of vaccines distributed, up to the date May
                   31, 2021. Using this data, we can further ask, 'does time and 
@@ -101,7 +101,7 @@ page_three <- tabPanel(
                 align = "center",
                 h2("Introduction"),
                 h5("How can we visually compare each state's total vaccination
-                   amount in the past months?"),
+                   amount in the past months?", style = "color:white"),
                 p("The interactive graph enables the audience to make direct
                   comparisons between states' daily vaccination rates by 
                   selecting desired states and seeing its corresponding
@@ -132,7 +132,8 @@ page_four <- tabPanel(
       align = "center",
       h1("Percentage of Vaccinated People and Unvaccinated People by States"),
       h2("Introduction"),
-      h5("What is the percentage of vaccinated people of each state?"),
+      h5("What is the percentage of vaccinated people of each state?", 
+         style = "color:white"),
       p("This interactive chart displays the comparison of the vaccinated 
       and unvaccinated population of each state through the date of May 9th, 2021. 
       A pie chart was chosen to show this comparison, as it is an effective 
